@@ -1,0 +1,46 @@
+.change {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Leftside {
+  height: 50vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  margin-top: 24%;
+  border-radius: 0px !important;
+}
+#button {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+#button1 {
+  background-color: red;
+  width: 110px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 100;
+  height: 35px;
+  border: none;
+}
+.text1 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 360px) {
+  .Leftside {
+    height: 50vh;
+    width: 34vh;
+    margin-top: 155px !important;
+  }
+}
+p {
+  color: #23773e;
+  font-size: 25px;
+}

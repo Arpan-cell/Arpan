@@ -1,14 +1,11 @@
-
-import './App.css';
-// import Login from './Auth/Login';
-import Routing from './Routing/Routing';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ReactExam from "./ReactExam";
 
 function App() {
   return (
     <div className="App">
-     <Routing/>
+      <ReactExam />
     </div>
   );
 }
