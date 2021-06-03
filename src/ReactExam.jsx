@@ -15,11 +15,11 @@ export default function ReactExam() {
       <div className="change">
         <div className="col-lg-6 col-md-6 col-sm-6 ">
           <div className="Leftside card" style={{ backgroundColor: change }}>
-            <div id="hello">
-              <h4>Hello</h4>
-              <h4>Hello Hello</h4>
-              <h4>Hello Hello Hello</h4>
-              <h4>Hello Hello Hello Hello</h4>
+            <div>
+            <h4>Hello</h4>
+            <h4>Hello Hello</h4>
+            <h4>Hello Hello Hello</h4>
+            <h4>Hello Hello Hello Hello</h4>
             </div>
           </div>
         </div>
