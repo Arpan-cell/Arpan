@@ -7,9 +7,10 @@ export const signup = (user) => {
   return async (dispatch) => {
     //action Request send to the server
     dispatch({ type: `${ActionConst.USER_REGISTER}_REQUEST` });
+    const api1 = "https://nodeprojectapi.herokuapp.com/register";
 
     axios
-      .post(`https://api09.herokuapp.com/register`, user)
+      .post(`${api1}`, user)
       .then((res) => {
         const msg = res.data.message;
         console.log(res.data);
@@ -47,22 +48,23 @@ export const signup = (user) => {
   };
 };
 
-export const signin = (user) => {
+export const login = (user) => {
   return async (dispatch) => {
     //action Request send to the server
     dispatch({ type: `${ActionConst.USER_LOGIN}_REQUEST` });
+    const api2 = "https://nodeprojectapi.herokuapp.com/login";
     axios
-      .post(`https://api09.herokuapp.com/login`, user)
+      .post(`${api2}`, user)
       .then((res) => {
         const msg = res.data.message;
-        console.log(res.data);
-        let storeData = res.data.token;
-        let storeData1 = res.data.full_name;
-        let storeData2 = res.data.email;
+        console.log(res);
+        let storeData = res.data.data.token;
+        let storeData1 = res.data.data.firstname;
+        console.log(storeData1);
+
         console.log(storeData);
         window.localStorage.setItem("token", storeData);
-        window.localStorage.setItem("full_name", storeData1);
-        window.localStorage.setItem("email", storeData2);
+        window.localStorage.setItem("firstname", storeData1);
 
         toast.success(msg, {
           position: "top-right",

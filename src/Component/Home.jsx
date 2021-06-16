@@ -19,7 +19,7 @@ const GalleryReact = () => {
     <>
       <Header />
 
-      <Home2/>
+      <Home2 />
       <FormControl
         className="search"
         type="text"

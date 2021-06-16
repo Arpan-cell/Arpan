@@ -14,10 +14,8 @@ import { signup } from "../Actions/Auth.Action";
 import { useDispatch } from "react-redux";
 import Header from "../Layout/Header/Header";
 const validationSchema = yup.object({
-  firstname: yup
-    .string("Enter your Firstname")
-    .required(" Firstname is required"),
-  lastname: yup.string("Enter your Lastname").required("Lastname is required"),
+  fname: yup.string("Enter your Firstname").required(" Firstname is required"),
+  lname: yup.string("Enter your Lastname").required("Lastname is required"),
   email: yup
     .string("Enter your email")
     .email("Enter a valid email")
@@ -53,8 +51,8 @@ export default function SignUp() {
 
   const formik = useFormik({
     initialValues: {
-      firstname: "",
-      lastname: "",
+      fname: "",
+      lname: "",
       email: "",
       password: "",
     },
@@ -86,33 +84,27 @@ export default function SignUp() {
               <Grid item xs={12} sm={6}>
                 <TextField
                   required
-                  id="firstname"
-                  name="firstname"
+                  id="fname"
+                  name="fname"
                   label="Firstname"
                   placeholder="Enter your First Name"
-                  value={formik.values.firstname}
+                  value={formik.values.fname}
                   onChange={formik.handleChange}
-                  error={
-                    formik.touched.firstname && Boolean(formik.errors.firstname)
-                  }
-                  helperText={
-                    formik.touched.firstname && formik.errors.firstname
-                  }
+                  error={formik.touched.fname && Boolean(formik.errors.fname)}
+                  helperText={formik.touched.fname && formik.errors.fname}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
                   placeholder="Enter your Last Name"
                   required
-                  id="lastname"
-                  name="lastname"
+                  id="lname"
+                  name="lname"
                   label="Lastname"
-                  value={formik.values.lastname}
+                  value={formik.values.lname}
                   onChange={formik.handleChange}
-                  error={
-                    formik.touched.lastname && Boolean(formik.errors.lastname)
-                  }
-                  helperText={formik.touched.lastname && formik.errors.lastname}
+                  error={formik.touched.lname && Boolean(formik.errors.lname)}
+                  helperText={formik.touched.lname && formik.errors.lname}
                 />
               </Grid>
               <Grid item xs={12}>
